@@ -2,12 +2,34 @@ local SpinHeart, super = Class(Bullet)
 
 function SpinHeart:init(x, y, dir, speed)
     super.init(self, x, y, "bullets/hathy/spinheart")
-    self:setScale(3)
+    self:setScale(5)
 
     self.physics.direction = dir
     self.physics.speed = speed
     self.destroy_on_hit = false
-    self.collider = PolygonCollider(self, {{3,20},{0,16},{0,7},{7,0},{20,0},{40,20},{20,40},{7,40},{0,33},{0,24},{3,20},{8,20},{4,15},{4,8},{9,4},{18,4},{36,20},{18,36},{9,36},{4,32},{4,25},{8,20}})
+    self.collider = PolygonCollider(self, {
+        {3,20},
+        {0,16},
+        {0,7},
+        {7,0},
+        {20,0},
+        {41,20.5},
+        {22,40},
+        {7,40},
+        {0,33},
+        {0,24},
+        {3,20},
+        {8,20},
+        {4,15},
+        {4,8},
+        {9,5},
+        {19,5},
+        {36,20.5},
+        {19,36},
+        {9,36},
+        {4,32},
+        {4,25},
+        {8,20}})
     self.damage = 0
 
     self.con = 0
